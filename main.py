@@ -47,7 +47,7 @@ def check():
         else:
             new_line_list = []
             for string in line:
-                if string == '\n':
+                if string == '\n' or string == '.' or string == '?' or string == ',' or string == '"':
                     pass
                 else:
                     new_line_list.append(string)
@@ -71,6 +71,8 @@ check()
 #one more operation
 if wrong_word == 1:
     print('\n\nthere is ' + str(wrong_word) + ' mistake\n\n')
+elif wrong_word == 0:
+    print('everything is fine :)')
 else:
     print('\n\nthere are ' + str(wrong_word) + ' mistakes\n\n')
 
